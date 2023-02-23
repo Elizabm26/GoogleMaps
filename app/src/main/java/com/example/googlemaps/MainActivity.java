@@ -6,6 +6,8 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -34,6 +36,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         mapa = googleMap;
         mapa.getUiSettings().setZoomControlsEnabled(true);
         mapa.setOnMapClickListener(this);
+        CameraUpdate camUpd1 =
+                CameraUpdateFactory
+                        .newLatLngZoom(new LatLng(-1.0801982016846716, -79.50113233338), 15);
+
+        mapa.moveCamera(camUpd1);
+
     }
 
     @Override
