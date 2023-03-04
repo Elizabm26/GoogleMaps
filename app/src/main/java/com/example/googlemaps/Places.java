@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class Places {
+
     public String lct_lat;
     public String lct_lng;
     public String icon;
